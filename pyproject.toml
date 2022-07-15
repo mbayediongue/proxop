@@ -1,0 +1,31 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proxop"
+version = "1.0.0"
+description = "This Python library provides an implementation of the proximity operator of many classical functions 
+                to solve non-smooth optimization problems."
+
+readme = "README.md"
+authors = [{ name = "mbayediongue", email = "mbayediongue22@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: CeCILL-B Free Software License Agreement (CECILL-B)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+]
+
+keywords = ["large-scale optimization","proximal", "optimization", "proximity operator"]
+dependencies = [
+    "numpy >= 1.14.0",
+    "scipy >= 1.8.0"
+]
+
+
+[project.urls] 
+Homepage = "http://proximity-operator.net/"
+
+[project.scripts]
+proxop = "proxop.__main__:main"
