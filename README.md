@@ -13,7 +13,7 @@ For more information see the [full project](http://proximity-operator.net/) cont
 
 ## Installation
 
-To install package:
+To install package (require python 3.8.0 or a later version):
 
     pip install proxop
 
@@ -23,11 +23,11 @@ To update, one should add the option "--upgrade":
 
 ## How to use it ?
 
-Please visit our [website](http://proximity-operator.net/)  for more tutorial and more details.
-
 To import the package:
 
     import proxop
+
+Please visit our [website](http://proximity-operator.net/)  for more tutorial and more details.
 
 ## Examples:
 
@@ -102,12 +102,15 @@ As expected, the result is finite, meaning the projection of 'x' belongs to the 
      array([[2., 2., 2.],
             [1., 1., 1.]])
      >>> b=np.array([-1, 2, 4])
-     
-     Set 'axis=0' to process along the rows of the matrix 'x' (note the dimension of 'b' must be compatible with the shape of 'x'):
-     >>> AffineBarrier(a,b, direction=0)(x)
+
+Set 'axis=0' to process along the rows of the matrix 'x' (note the dimension of 'b'
+must be compatible with the shape of 'x'):
+
+     >>> AffineBarrier(a,b, axis=0)(x)
      inf
-     
-     Projection of x onton the affine set:
+
+ Projection of x onton the affine set:
+
      >>> px = AffineBarrier(a,b, axis=0).prox(x)  
      >>> AffineBariier(x,b, axis=0)(px)
       0.157704693902156
